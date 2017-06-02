@@ -1,5 +1,5 @@
 # Conni
-Tiny desktop app to test the connectivity to the Internet
+Tiny desktop and server app to test the connection to the Internet or any HTTP service
 
 ## Usage
 
@@ -31,8 +31,8 @@ Click on the tray icon to open the menu and click on the "Quit" item to quit the
 - Create a JAR containing all the necessary classes and files for the execution.
 
 ### Sprint 2: Logs, connection speed visualization and internationalization
-- Save the result of all the calls in a local database.
-- Use shades of colors between orange and green to specify the current connection speed compared to the last 72 hours.
+- Save the results of all the calls in a local database.
+- Use shades of colors between orange and green to specify the current connection speed compared to the  average of the last 72 hours.
 - Make the texts internationalized.
 - Add the ability to pause the checks.
 
@@ -42,15 +42,24 @@ Click on the tray icon to open the menu and click on the "Quit" item to quit the
 ### Sprint 4: Settings
 - Create a tiny web interface to administrate the settings:
   - Check period
-  - Remote URL to use
+  - Customize the request for the check
   - Addition of custom response processors (provide access to the menu and tray icon)
   - Enable / Disable response processors
   - Location of the local data folder
   - Internet browser to use to edit the settings
+  - Delete all the local files
 
 ### Sprint 5: Reports
-- Create web reports to display the connection status
+- Display web reports with charts to display the connection status logs (failures and response time).
 
 ### Sprint 5: Packaging
-- Create packages for executable for Windows, Mac and Linux (deb and rpm)
+- Create packages for executable for Windows, Mac and Linux (deb and rpm).
+
+### Sprint 6: Multiple checks
+- Run multiple checks on different HTTP services and assign different chains of response processors.
+- Create a new system tray icon to reflect the overall status and the number of checks in failure.
+- Attach a popup menu to that new system tray icon to display the connectivity of each check.
+
+### Sprint 7: Scripting
+- Ability to create response processors with Groovy scripts.
 
