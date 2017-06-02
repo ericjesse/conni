@@ -1,0 +1,56 @@
+apply plugin: 'maven'
+
+group = 'org.ericjesse'
+version = '0.1-SNAPSHOT'
+
+description = 'App to validate the connectivity to the Internet'
+
+apply plugin: 'java'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenLocal()
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+dependencies {
+    compile(
+            'com.squareup.okhttp3:okhttp:3.6.0',
+            "commons-logging:commons-logging:1.2",
+            "org.slf4j:slf4j-api:1.7.7",
+
+            "org.apache.logging.log4j:log4j-api:2.5",
+            "org.apache.logging.log4j:log4j-core:2.5",
+            "org.apache.logging.log4j:log4j-jcl:2.5"
+    )
+    compile(group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.5') {
+        exclude(module: 'slf4j-api')
+    }
+
+    testCompile(
+            'junit:junit:4.12',
+            'org.hamcrest:hamcrest-all:1.3',
+            'org.mockito:mockito-core:2.8.9',
+            'com.squareup.okhttp3:mockwebserver:3.6.0',
+            "com.github.tomakehurst:wiremock:2.6.0"
+    )
+}
+
+
+// Create a single JAR with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Conni',
+                'Implementation-Version': version,
+                'Author': 'Eric Jessé (me@ericjesse.com)',
+                'Main-Class': 'com.ericjesse.conni.Conni'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

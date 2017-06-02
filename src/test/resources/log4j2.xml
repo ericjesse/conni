@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30" status="info" name="XMLConfigForWeb">
+    <!-- http://logging.apache.org/log4j/2.x/manual/configuration.html -->
+    <Filter type="ThresholdFilter" level="info"/>
+    <Properties>
+        <Property name="log_filename">tests.log</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{ISO8601} %level{length=5} [%thread:%sequenceNumber] %class{1}.%method{1}:%line - %message%n"/>
+        </Console>
+        <File name="testFile" fileName="${log_filename}">
+            <PatternLayout>
+                <Pattern>%d{ISO8601} %level{length=5} [%thread] %C{-10}.%method:%L - %message%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.ericjesse.conni.http" includeLocation="true" level="debug" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="org.apache.http.wire" includeLocation="true" level="debug" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="org.reflections" includeLocation="false" level="error" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Root level="info" includeLocation="true" additivity="false">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+
+
+</Configuration>
