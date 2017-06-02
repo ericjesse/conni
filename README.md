@@ -51,3 +51,6 @@ Click on the tray icon to open the menu and click on the "Quit" item to quit the
 ### Sprint 5: Reports
 - Create web reports to display the connection status
 
+### Sprint 5: Packaging
+- Create packages for executable for Windows, Mac and Linux (deb and rpm)
+
