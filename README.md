@@ -61,5 +61,5 @@ Click on the tray icon to open the menu and click on the "Quit" item to quit the
 - Attach a popup menu to that new system tray icon to display the connectivity of each check.
 
 ### Sprint 7: Scripting
-- Ability to create response processors with Groovy scripts.
+- Ability to create response processors with Groovy or Javascript scripts.
 
