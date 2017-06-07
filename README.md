@@ -10,7 +10,12 @@ Having Java 8 installed on your machine.
 Just download the JAR: [conni-all-0.1-SNAPSHOT.jar](libs/conni-all-0.1-SNAPSHOT.jar) 
 
 ### Run and use Conni
-Double-click on the downloaded JAR file.
+Double-click on the downloaded JAR file or run the following command:
+```
+java -jar conni-all-0.1-SNAPSHOT.jar
+```
+
+*TODO: Sign the jar to remove warnings on Mac.*
 
 An icon appears in the system tray to indicate the Internet connection status ![Tray icon](images/current-icon.png "Tray icon")
 The color depends on the connection status.
@@ -40,10 +45,11 @@ Click on the tray icon to open the menu and click on the "Quit" item to quit the
 - Create a continuous integration environment to test after each commit and build the app nightly.
 
 ### Sprint 4: Settings
+- Addition of custom response processors (provide access to the menu and tray icon to the responses)
 - Create a tiny web interface to administrate the settings:
   - Check period
   - Customize the request for the check
-  - Addition of custom response processors (provide access to the menu and tray icon)
+  - Time window to compare the current speed
   - Enable / Disable response processors
   - Location of the local data folder
   - Internet browser to use to edit the settings
@@ -52,14 +58,19 @@ Click on the tray icon to open the menu and click on the "Quit" item to quit the
 ### Sprint 5: Reports
 - Display web reports with charts to display the connection status logs (failures and response time).
 
-### Sprint 5: Packaging
+### Sprint 6: Packaging
 - Create packages for executable for Windows, Mac and Linux (deb and rpm).
 
-### Sprint 6: Multiple checks
+### Sprint 8: Auto-update
+- Add the ability to check new versions and apply the update when there is a new version.
+- Add configuration parameters for URL to check and automatic installation of the update.
+
+### Sprint 8: Multiple checks
 - Run multiple checks on different HTTP services and assign different chains of response processors.
 - Create a new system tray icon to reflect the overall status and the number of checks in failure.
 - Attach a popup menu to that new system tray icon to display the connectivity of each check.
 
-### Sprint 7: Scripting
+
+### Sprint 9: Scripting
 - Ability to create response processors with Groovy or Javascript scripts.
 
