@@ -7,12 +7,12 @@ Tiny desktop and server app to test the connection to the Internet or any HTTP s
 Having Java 8 installed on your machine.
 
 ### Download and execute
-Just download the JAR: [conni-all-0.1-SNAPSHOT.jar](libs/conni-all-0.1-SNAPSHOT.jar) 
+Just download the JAR: [conni-all-0.2-SNAPSHOT.jar](libs/conni-all-0.2-SNAPSHOT.jar) 
 
 ### Run and use Conni
 Double-click on the downloaded JAR file or run the following command:
 ```
-java -jar conni-all-0.1-SNAPSHOT.jar
+java -jar conni-all-0.2-SNAPSHOT.jar
 ```
 
 *TODO: Sign the jar to remove warnings on Mac.*

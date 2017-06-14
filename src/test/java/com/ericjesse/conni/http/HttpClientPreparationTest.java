@@ -51,8 +51,8 @@ public class HttpClientPreparationTest {
                         Matchers.<String>hasItem("application/json; charset=utf-8")
                 )
         );
-        assertThat("The HTTP header Accept-Content-Type should be application/json; charset=utf-8 by default",
-                convertedRequest.headers("Accept-Content-Type"),
+        assertThat("The HTTP header Accept should be application/json; charset=utf-8 by default",
+                convertedRequest.headers("Accept"),
                 allOf(
                         Matchers.<String>hasSize(1),
                         Matchers.<String>hasItem("application/json; charset=utf-8")
@@ -110,8 +110,8 @@ public class HttpClientPreparationTest {
                         Matchers.<String>hasItem("application/json; charset=utf-8")
                 )
         );
-        assertThat("The HTTP header Accept-Content-Type should be application/json; charset=utf-8",
-                convertedRequest.headers("Accept-Content-Type"),
+        assertThat("The HTTP header Accept should be application/json; charset=utf-8",
+                convertedRequest.headers("Accept"),
                 allOf(
                         Matchers.<String>hasSize(1),
                         Matchers.<String>hasItem("application/json; charset=utf-8")
@@ -189,8 +189,8 @@ public class HttpClientPreparationTest {
                         Matchers.<String>hasItem("text/xml; charset=utf-8")
                 )
         );
-        assertThat("The HTTP header Accept-Content-Type should be text/xml; charset=utf-8",
-                convertedRequest.headers("Accept-Content-Type"),
+        assertThat("The HTTP header Accept should be text/xml; charset=utf-8",
+                convertedRequest.headers("Accept"),
                 allOf(
                         Matchers.<String>hasSize(1),
                         Matchers.<String>hasItem("text/xml; charset=utf-8")
@@ -257,8 +257,8 @@ public class HttpClientPreparationTest {
                         Matchers.<String>hasItem("text/html; charset=utf-8")
                 )
         );
-        assertThat("The HTTP header Accept-Content-Type should be text/html; charset=utf-8",
-                convertedRequest.headers("Accept-Content-Type"),
+        assertThat("The HTTP header Accept should be text/html; charset=utf-8",
+                convertedRequest.headers("Accept"),
                 allOf(
                         Matchers.<String>hasSize(1),
                         Matchers.<String>hasItem("text/html; charset=utf-8")

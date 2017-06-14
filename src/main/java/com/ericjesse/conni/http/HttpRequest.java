@@ -22,7 +22,7 @@ public class HttpRequest implements Serializable {
 
     public static final String CONTENT_TYPE_KEY = "Content-Type";
 
-    public static final String ACCEPT_CONTENT_TYPE_KEY = "Accept-Content-Type";
+    public static final String ACCEPT_KEY = "Accept";
 
     // Package visibility for test purpose.
     static final HttpMethod DEFAULT_METHOD = HttpMethod.GET;
@@ -86,7 +86,7 @@ public class HttpRequest implements Serializable {
         addHeaderIfNotExists(USER_AGENT_KEY, DEFAULT_USER_AGENT);
         addHeaderIfNotExists(ACCEPT_ENCODING_KEY, DEFAULT_ACCEPT_ENCODING);
         addHeaderIfNotExists(CONTENT_TYPE_KEY, this.contentType.getValue());
-        addHeaderIfNotExists(ACCEPT_CONTENT_TYPE_KEY, this.contentType.getValue());
+        addHeaderIfNotExists(ACCEPT_KEY, this.contentType.getValue());
     }
 
     private void addHeaderIfNotExists(final String key, final String value) {

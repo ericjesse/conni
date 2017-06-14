@@ -75,7 +75,7 @@ public class HttpClientMockedTest {
         httpClient.addObserver(wo);
 
         // Run the actual HTTP call.
-        Instant before = Instant.now();
+        Instant before = Instant.now().minusMillis(1);
         httpClient.check();
         wo.waitGroup(ACQUIRE_TIMEOUT);
         obs.assertProcessedErrors(0);
@@ -110,7 +110,7 @@ public class HttpClientMockedTest {
         httpClient.addObserver(wo);
 
         // Run the actual HTTP call twice.
-        Instant before = Instant.now();
+        Instant before = Instant.now().minusMillis(1);
         httpClient.check();
         httpClient.check();
         wo.waitGroup(ACQUIRE_TIMEOUT);
@@ -183,7 +183,7 @@ public class HttpClientMockedTest {
         httpClient.addObserver(wo);
 
         // Run the actual HTTP call.
-        Instant before = Instant.now();
+        Instant before = Instant.now().minusMillis(1);
         httpClient.check();
         wo.waitGroup(ACQUIRE_TIMEOUT);
         obs.assertProcessedErrors(0);
@@ -217,7 +217,7 @@ public class HttpClientMockedTest {
         httpClient.addObserver(wo);
 
         // Run the actual HTTP call.
-        Instant before = Instant.now();
+        Instant before = Instant.now().minusMillis(1);
         httpClient.check();
         wo.waitGroup(ACQUIRE_TIMEOUT);
         obs.assertProcessedErrors(0);
@@ -339,7 +339,7 @@ public class HttpClientMockedTest {
         httpClient.addObserver(wo);
 
         // Run the actual HTTP call.
-        Instant before = Instant.now();
+        Instant before = Instant.now().minusMillis(1);
         httpClient.check();
         wo.waitGroup(ACQUIRE_TIMEOUT);
         obs.assertProcessedErrors(0);
@@ -377,7 +377,7 @@ public class HttpClientMockedTest {
         httpClient.addObserver(wo);
 
         // Run the actual HTTP call.
-        Instant before = Instant.now();
+        Instant before = Instant.now().minusMillis(1);
         httpClient.check();
         wo.waitGroup(ACQUIRE_TIMEOUT);
         obs.assertProcessedErrors(0);
@@ -426,7 +426,7 @@ public class HttpClientMockedTest {
         httpClient.addObserver(wo);
 
         // Run the actual HTTP call.
-        Instant before = Instant.now();
+        Instant before = Instant.now().minusMillis(1);
         httpClient.check();
         wo.waitGroup(ACQUIRE_TIMEOUT);
         obs.assertProcessedErrors(0);

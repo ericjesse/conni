@@ -1,7 +1,7 @@
 apply plugin: 'maven'
 
 group = 'org.ericjesse'
-version = '0.1-SNAPSHOT'
+version = '0.2-SNAPSHOT'
 
 description = 'App to validate the connectivity to the Internet'
 

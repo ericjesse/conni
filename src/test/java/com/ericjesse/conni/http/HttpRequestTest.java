@@ -28,7 +28,7 @@ public class HttpRequestTest {
                         hasEntry(is("User-Agent"), hasItem("Conni (com.ericjesse.conni)")),
                         hasEntry(is("Accept-Encoding"), hasItem("gzip")),
                         hasEntry(is("Content-Type"), hasItem("application/json; charset=utf-8")),
-                        hasEntry(is("Accept-Content-Type"), hasItem("application/json; charset=utf-8"))
+                        hasEntry(is("Accept"), hasItem("application/json; charset=utf-8"))
                     )
                 )
         ));
@@ -54,7 +54,7 @@ public class HttpRequestTest {
                         hasEntry(is("User-Agent"), hasItem("Conni (com.ericjesse.conni)")),
                         hasEntry(is("Accept-Encoding"), hasItem("gzip")),
                         hasEntry(is("Content-Type"), hasItem("application/json; charset=utf-8")),
-                        hasEntry(is("Accept-Content-Type"), hasItem("application/json; charset=utf-8")),
+                        hasEntry(is("Accept"), hasItem("application/json; charset=utf-8")),
                         hasEntry(is("head1"), contains(
                                 is("value1.1"),
                                 is("value1.2")
@@ -86,7 +86,7 @@ public class HttpRequestTest {
                         hasEntry(is("User-Agent"), hasItem("Conni (com.ericjesse.conni)")),
                         hasEntry(is("Accept-Encoding"), hasItem("gzip")),
                         hasEntry(is("Content-Type"), hasItem("text/xml; charset=utf-8")),
-                        hasEntry(is("Accept-Content-Type"), hasItem("text/xml; charset=utf-8")),
+                        hasEntry(is("Accept"), hasItem("text/xml; charset=utf-8")),
                         hasEntry(is("headXml1"), contains(
                                 is("valueXml1.1"),
                                 is("valueXml1.2")
@@ -115,7 +115,7 @@ public class HttpRequestTest {
                         hasEntry(is("User-Agent"), hasItem("Conni (com.ericjesse.conni)")),
                         hasEntry(is("Accept-Encoding"), hasItem("gzip")),
                         hasEntry(is("Content-Type"), hasItem("text/html; charset=utf-8")),
-                        hasEntry(is("Accept-Content-Type"), hasItem("text/html; charset=utf-8")),
+                        hasEntry(is("Accept"), hasItem("text/html; charset=utf-8")),
                         hasEntry(is("headHtml1"), contains(
                                 is("valueHtml1.1"),
                                 is("valueHtml1.2")
@@ -142,7 +142,7 @@ public class HttpRequestTest {
                         hasEntry(is("User-Agent"), hasItem("myUser-Agent")),
                         hasEntry(is("Accept-Encoding"), hasItem("deflate")),
                         hasEntry(is("Content-Type"), hasItem("application/json; charset=utf-8")),
-                        hasEntry(is("Accept-Content-Type"), hasItem("application/json; charset=utf-8"))
+                        hasEntry(is("Accept"), hasItem("application/json; charset=utf-8"))
                     )
                 )
         ));
